@@ -1,0 +1,57 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  align-self: center;
+
+}
+
+#root {
+  background-image: radial-gradient(circle, #091331, #08122f, #07112d, #05102a, #040f28, #030e26, #030d23, #020c21, #020b1e, #010a1b, #000818, #000715);
+  /* background-image: linear-gradient(
+    to right top,
+    #060b14,
+    #0a1021,
+    #10122d,
+    #1b1237,
+    #2b0e3e
+  ); */
+  margin: 0;
+
+  text-align: center;
+  width: 100vw;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html {
+  height: 100vh;
+  width: 100%;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  font-family: 'Work Sans', sans-serif;
+  font-feature-settings: normal;
+  font-variation-settings: normal;
+}
+
+body {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  flex-wrap: wrap;
+  width: 100%;
+} 
+
+@media screen and (max-width: 860px){
+  #root {
+    overflow: auto;
+  }
+}

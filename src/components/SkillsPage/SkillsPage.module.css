@@ -1,0 +1,88 @@
+.skillsPage {
+  display: flex;
+  margin: 40px 0;
+  transition: all 0.5s;
+}
+
+.skillsImage {
+  margin-right: 20px;
+  width: 120px;
+  transition: all 0.5s;
+}
+
+.skillsCard {
+  border-radius: 5px;
+  padding: 20px;
+
+  transition: all 0.5s;
+  background: radial-gradient(
+    circle,
+    #341967,
+    #221754,
+    #141441,
+    #0c0d2e,
+    #02011b
+  );
+  display: flex;
+  flex: 0 0 calc(50% - 30px);
+  height: 400px;
+}
+
+.skillsCard:hover {
+  background: transparent;
+  background: radial-gradient(
+    circle,
+    #225bb6,
+    #2f4ea2,
+    #35418e,
+    #36357b,
+    #342a68,
+    #2e245b,
+    #271e4f,
+    #211843,
+    #181539,
+    #11112f,
+    #0c0925,
+    #02011b
+  );
+  
+  transition: all 0.5s;
+  .skillsImage {
+    filter: drop-shadow(0 0 0.45rem rgb(146, 170, 215));
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transform: scale(1.1);
+
+  }
+}
+.skillsDescription {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  text-align: start;
+  margin: 10px;
+  gap: 10px;
+}
+.skillsCradFlex {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 980px) {
+  .skillsCard {
+    flex: 0 0 calc(100% - 10px);
+    flex-direction: column;
+    margin: 0 40px;
+  }
+  .skillsCradFlex {
+    flex-direction: column;
+  }
+  .skillsImage {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,72 @@
+.rightContainer {
+  background-image: linear-gradient(
+    to right top,
+    #060b14,
+    #00142f,
+    #00194b,
+    #001a66,
+    #08167e
+  );
+  border-radius: 10px;
+  flex: 0 0 40%;
+  text-align: left;
+  letter-spacing: 1.2px;
+  margin-right: 5px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  filter: drop-shadow(0 0 0.75rem rgb(2, 48, 71));
+  transition: all .3s;
+  
+
+}
+
+.rightContainer:hover{
+    filter: drop-shadow(0 0 0.75rem rgb(3, 132, 100));
+}
+
+.theHeader {
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  align-items: center;
+  height: 20px;
+  width: 100%;
+  border-bottom: 1px solid snow;
+  text-align: center;
+}
+.theHeader :is(p) {
+  margin: 5px;
+}
+.theHeader :first-child {
+  background-color: rgb(213, 56, 56);
+  padding: 6px;
+  border-radius: 50%;
+  width: 5px;
+}
+
+.theHeader :nth-child(2) {
+  background-color: rgb(230, 237, 25);
+  padding: 6px;
+  border-radius: 50%;
+  width: 5px;
+}
+
+.theHeader :last-child {
+  background-color: rgb(34, 220, 83);
+  padding: 6px;
+  border-radius: 50%;
+  width: 5px;
+}
+
+.codeContent {
+  line-height: 24px;
+  margin-top: 5px;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 860px) {
+  .rightContainer{
+    flex: 100%;
+    margin-top: 20px;
+  }
+}

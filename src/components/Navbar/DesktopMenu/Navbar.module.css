@@ -1,0 +1,58 @@
+.navbar :is(a) {
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: .3s all;
+}
+.navbar :is(a):nth-child(1)::after {
+  background-color: #64d4fc; 
+}
+
+.navbar :is(a):nth-child(2)::after {
+  background-color: #ff6347; 
+}
+
+.navbar :is(a):nth-child(3)::after {
+  background-color: #32cd32; 
+}
+
+.navbar :is(a):nth-child(4)::after {
+  background-color: #ff69b4; 
+}
+.navbar :is(a):hover{
+  transform:  scale(1.08);
+}
+
+
+.navbar :is(a)::after {
+  bottom: 0;
+  content: '';
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out;
+  width: 100%;
+}
+
+.navbar :is(a):hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  width: 60%;
+}
+
+@media screen and (max-width: 860px) {
+  .navbar {
+    display: none;
+  }
+}

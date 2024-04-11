@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+.aboutMeContainer {
+  font-family:  "Work Sans", sans-serif;;
+  border-top: 0.2px solid grey;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: left;
+  font-size: 1.2rem;
+  margin: 30px 0;
+  letter-spacing: 1px;
+  min-width: 100%;
+}
+
+.aboutMeText {
+  align-self: center;
+  width: 50%;
+  backdrop-filter: blur(10px);
+  
+}
+
+
+
+.aboutTitle {
+  margin-top: 40px;
+  color: rgb(49, 214, 49);
+}
+
+.myImage {
+  border-radius: 10px;
+  margin-top: 40px;
+  transition: all 0.5s;
+  -webkit-filter: grayscale(50%);
+  filter: grayscale(100%);
+  width: 250px;
+  transition-duration: 1s;
+}
+
+.myImage:hover {
+  filter: drop-shadow(0 0 0.75rem rgb(209, 192, 9));
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  transform: scale(1.1)
+}
+
+
+
+
+@media screen and (max-width: 860px){
+  
+  .aboutMeContainer{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(50% - 32px);
+    text-align: center;
+  }
+  .aboutMeText{
+    width: 80%;
+  }
+  
+}

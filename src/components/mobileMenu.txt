@@ -1,0 +1,117 @@
+import { useState } from 'react';
+import NavItem from '../NavItem';
+import "./MobileMenu.css"
+
+const MobileMenu = () => {
+
+  const [burgerClass, setBurgerClass] = useState('burger-bar unclickecd');
+  const [menuClass, setMenuClass] = useState('menu hidden');
+  const [isMenuOpen, setIsmenuOpen] = useState(null);
+
+  const updateMenu = () => {
+    if (!isMenuOpen) {
+      setBurgerClass('burger-bar clicked');
+      setMenuClass('menu visible');
+    } else {
+      setBurgerClass('burger-bar unclicked');
+      setMenuClass('menu hidden');
+    }
+    setIsmenuOpen(!isMenuOpen)
+  };
+  return (
+    <>
+      <nav>
+        <div className="burger_Menu" onClick={updateMenu}>
+          <div className={burgerClass} ></div>
+          <div className={burgerClass} ></div>
+          <div className={burgerClass}></div>
+        </div>
+      </nav>
+
+      <div className={menuClass}>
+          <NavItem  category="ABOUT" />
+          <NavItem  category="SKILLS" />
+          <NavItem  category="PROJECTS" />
+          <NavItem  category="CONTACT" />
+      </div>
+    </>
+  );
+};
+
+export default MobileMenu;
+
+
+----CSS-----
+
+nav {
+  
+  display: flex;
+  position: absolute;
+  right: 0;
+  height: 5rem;
+  padding: 1rem;
+  width: 5rem;
+  z-index: 30;
+}
+
+.burger_Menu {
+  display: flex;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 3rem;
+}
+
+.burger-bar {
+  background: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: .4rem;
+  width: 3.7rem;
+}
+.menu {
+  background-color: rgba(20, 9, 26, 0.905);
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  transition: .3s;
+  position: absolute;
+  right: 0;
+  top:13.5%;
+  height: 50%;
+  width: 100%;
+  z-index: 20;
+}
+
+
+.hidden {
+  display: none;
+}
+
+.visible{
+  display: inherit;
+}
+
+.burger-bar.clicked:nth-child(1){
+  transform: rotate(46deg) translate(.8rem, 1.5rem);
+  transition: .5s ease-out ;
+}
+.burger-bar.clicked:nth-child(2){
+  transform: scale(0.001);
+  transition: .5s ease-out ;
+}
+.burger-bar.clicked:nth-child(3){
+  transform: rotate(130deg) translate(-.4rem, 1.1rem);
+  transition: .5s ease-out ;
+}
+
+.burger-bar.unclicked{
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@media screen and (min-width: 861px) {
+  nav, .menu {
+    display: none;
+  }
+}
